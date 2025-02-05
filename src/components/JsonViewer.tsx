@@ -11,7 +11,6 @@ const JsonViewer: React.FC = () => {
     useEffect(() => {
         const url = `https://ronin-stand-api.cosmonova-broadcast.tv/ronin/app/resources${location.pathname}`;
         fetchJson(url);
-        console.log(212)
     }, [fetchJson, location.pathname]);
 
     return jsonData ? <JsonRenderer data={jsonData as JsonData} /> : null;
